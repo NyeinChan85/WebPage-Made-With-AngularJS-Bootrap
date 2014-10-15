@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="profile">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body class="list-group" ng-controller="ListController as profile">
+    <header>
+      <h2 class="text-center">Welcome to My Page</h2>
+      <h2 class="text-center"> -------------------------------- </h2>
+    </header>
+    <div class="list-group-item" ng-repeat="info in profile.information">
+      <h5>
+        {{info.header}}
+      </h5>
+
+    
+
+      <section class="tab" ng-controller="TabController as tab">
+        <ul class="nav nav-pills">
+          <li ng-class="{ active: tab.isSet(1) }">
+            <a href ng-click="tab.setTab(1)">Who I Am</a></li>
+          <li ng-class="{ active: tab.isSet(2) }">
+            <a href ng-click="tab.setTab(2)">My experiences and educational background</a></li>
+          <li ng-class="{ active: tab.isSet(3) }">
+            <a href ng-click="tab.setTab(3)">What I have done professionally so far</a></li>
+
+          <li ng-class="{ active: tab.isSet(4) }">
+            <a href ng-click="tab.setTab(4)">You can reach me @</a></li>
+        </ul>
+        <div ng-show="tab.isSet(1)">
+          <h3>Hi There !!!</h3>
+          <blockquote>{{info.whoIam}}</blockquote>
+        </div>
+        <div ng-show="tab.isSet(2)">
+          <h3>Job Experiences</h3>
+          <blockquote> {{info.job}}</blockquote>
+
+          <h3>Education</h3>
+          <blockquote>{{info.education}} - Computer Science</blockquote>
+        </div>
+        <div ng-show="tab.isSet(3)">
+          <h3>Projects</h3>
+
+          <blockquote>{{info.projects}}</blockquote>
+        </div>
+
+        <div ng-show="tab.isSet(4)">
+          <h3>Here my contacts..</h3>
+
+          <blockquote>Twitter: {{info.contacts}}</blockquote>
+        </div>
+      </section>
+
+    </div>
+
+  </body>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit"><center> @2014 NYEINCHAN.ME All Rights Reserved</center></p>
+      </div>
+    </div>
+</html>
