@@ -22,7 +22,7 @@
     {
       header: '"When you learn to code, it opens up for you to learn many other things. :) "',
       whoIam: "My name is Nyein Chan Kyaw. I'm a passionate software and web developer from New York City. I love coding, playing guitars and listening to folk songs!!!",
-      job:'vDiscovery (08/2012 - present), G & G LLC (11/2006- 06/2009)',
+      job:'Disons Gems (01/2015 - 04/2015), vDiscovery (08/2012 - 12/2014), G & G LLC (11/2006- 06/2009)',
       education: 'Queens Collge(2014)', 
       projects: "will be updated soon",
       contacts: "@nck85"
